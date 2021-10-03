@@ -1,142 +1,189 @@
-import 'dart:io';
-                             //Q2
-void main() {
-stdout.write("Enter a number to print the multiple of it");
-int n = int.parse(stdin.readLineSync()!);
-table(n);
-}
-void table(r){
-
-  int num=1;
-  for (num; num <= 10; num++) {
-    var table=num*r;
-    print("${r} x ${num} = ${table}");
-  }
-}
-
-
-			//Q3
-import 'dart:io';
-void main(){
-func(6);
-
-}
-
-void func(int p) {
-  var s = [2, 4, 6, 8, 9];
-  for (var i =0; i<4;i++ ){
-  var l = (p / s[i]);
-  print(l);
-}
-
-}
-
-			//Q4
-
-//question number 4
-void main()
+void main()                ANS : 2 
 {
-List <String> names=["maaz","kamran","hussain","furqan","younus"];
-List marks=[87,83,75,68,91];
-for(var i=0 ; i<marks.length; i++){
-result(marks[i],names[i]);
+
+stdout.write("Enter number  = ");
+int y = int.parse(stdin.readLineSync()!);
 }
+
+void Table(int y){
+  var w=0;
+ var e=10
+ for(w;w<=e;w++){
+   int l=w*y;
+   print(l);
+ }
 }
-void result(marks,names){
-  if(marks>=90 || marks>=80){
-    print("$names got $marks marks = A+ grade");
-  }
-  else if(marks>=70 || marks<=79){
-    print("$names got $marks marks = B grade");
-  }
-  else if(marks>=60 || marks<=69){
-    print("$names got $marks marks = c grade");
+
+
+void main()             ANS : 3        
+{
+ 
+  list(2);
+ 
+}
+
+void list(int m){
+ 
+  var y=0;
+  List list1 = [2,4,6,8,9];
+  for(y; y<list1.length ; y++)
+  {
+    var n = (m/list1[y]);
+    print(n);
+ 
+
+
+
   }
 }
 
 
-				//Q5
-//question number 5
-void main()               
+void main()               ANS : 4               
 {
-var personal_details =Data();
-personal_details.info();
+ 
+ 
+List <String> n=["ehad","amir","kami","ibaad","wahab"];
+List number=[60,54,72,89,96];
+ 
+  for(var e=0 ;e<number.length; e++){
+    result(number[e],n[e]);
+  }
+ 
 }
-class Data
+
+
+
+
+void result(number,n){
+
+ 
+  if(number>=80){
+    print(" A+ ");
+  }
+  else if(number>=70 || number<=79){
+    print("B = grade");
+  }
+  else if(number>=60 || number<=69){
+    print("C = grade");
+  }
+    else if(number>=50 || number<=59){
+    print("d grade");
+  }
+ else{
+    print("you failed");
+  }
+}
+
+
+
+
+void main()                ANS : 5 
 {
-void info(){
-  String name="Maaz Ahmed";
+ 
+var v=Me();
+v.EducationData();
+ 
+}
+
+class Me
+{
+void EducationData(){
+  var name="Maaz";
   int age=19;
-  var courses_list=["Programming","Physics","Calculus"];
-  print("Bio Data of one person=");
-  print("name = $name"); 
-  print("age= $age"); 
-  print("courses=$courses_list");
+  var course=["isl","math","pst"];
+  print("Maaz data=");
+  print("name = $name" "age= $age" "courses=$course" );
 }
 }
 
 
-			//Q6
 
-void main()                
+
+
+
+
+
+
+
+void main()                         ANS : 6 
+
+
 {
-var MyName=Name();
-print("My Name Is ${MyName.name}");
-}
-class Name
-{
-  String name="Maaz Ahmed Khan";
+
+  var name=N();
+ print("My Name Is name.x");
+ 
 }
 
-			//Q7
-
- //Q7
-void main()
+class N
 {
-var My=Bio("Maaz",19,"BSCS");
-print("${My.Name} ${My.Age} ${My.Education}");
+String x="My Name Is Maaz Ahmed";
+ 
+ 
 }
-class Bio
+
+
+
+
+
+
+
+void main()                              ANS : 7                 
 {
-  late var Name;
-  late int Age;
-  late String Education;
-  Bio(var Name ,int Age , String Education ){
-    this.Name=Name;
-    this.Age=Age;
-    this.Education=Education;
+  var z=information("maaz",19,"BSSE");
+ print("${z.Name} ${z.Age} $z.Education");
+ 
+}
+
+class information
+{
+
+ var Name;
+ int Age;
+late String Education;
+
+ 
+my( this.Name , this.Age ,   this.Education)
+ 
+}
+
+
+ void main()             ANS:8                      
+{
+ 
+  var m=mobile();
+  m.size=(6);
+ 
+
+ 
+  var t=tablet();
+ 
+  t.size=(15);
+
+}
+   
+
+class gadget{
+ 
+ 
+ 
+void display(){
+ 
+    print("has display");
   }
 }
 
+class mobile extends gadget {
+ 
+  late int size;
 
-			//Q8
 
-void main()                                
-{
-  var human=Humans();
-  human.legs=(2);
-  human.same_item="Drinks Water";
-  human.speak(); 
-  var dog=Dog();
-  dog.same_item="Drinks Water";
-  dog.legs=(4);
-  dog.bark();
-} 
-class LivingCreatures{
-  late String same_item;
-void eat(){
-    print("eats food to live alive");
-  }
+ 
+ 
 }
-class Humans extends LivingCreatures { 
-  late int legs;
-  void speak(){
-    print("Human speaks");
-  }
-}
-class Dog extends LivingCreatures{
-  late int legs;  
-  void bark(){
-    print("Dogs Bark");
-  }
-}
+
+class tablet extends gadget{
+  late int size;
+ 
+ 
+ }
